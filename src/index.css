@@ -92,7 +92,7 @@
   }
   
   .hover-3d {
-    @apply transition-transform duration-300 hover:rotate-3d;
+    @apply transition-transform duration-300 hover:animate-rotate-3d;
     transform-style: preserve-3d;
   }
   
