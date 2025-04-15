@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
-import { ChevronDown, ArrowUpDown, Filter } from "lucide-react";
+import { ChevronDown, ArrowUpDown, Filter, ImageOff } from "lucide-react";
 
 // Mock product data
 const products = [
@@ -104,6 +104,12 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
     }),
   };
 
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <motion.div 
       className="luxury-card card-3d overflow-hidden"
@@ -113,11 +119,21 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
       variants={variants}
     >
       <div className="relative overflow-hidden h-64">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-        />
+        {!imageError && product.image ? (
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            onError={handleImageError}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-luxury-navy/50">
+            <div className="text-center">
+              <ImageOff className="h-16 w-16 mx-auto text-luxury-gold/50 mb-2" />
+              <p className="text-sm text-luxury-silver">Image unavailable</p>
+            </div>
+          </div>
+        )}
         <div className="absolute top-4 right-4 bg-luxury-gold text-luxury-black px-3 py-1 text-xs uppercase font-medium">
           {product.type}
         </div>
