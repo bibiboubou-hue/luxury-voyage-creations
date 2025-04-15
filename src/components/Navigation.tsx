@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ShoppingCart, User } from "lucide-react";
+import { Menu, X, ShoppingCart, User, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Dialog } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,6 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
-  // Check if we've scrolled down to add background blur
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -58,7 +56,6 @@ const Navigation = () => {
               <span className="text-sm font-light text-luxury-silver uppercase tracking-widest">VOYAGE</span>
             </Link>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
@@ -76,7 +73,6 @@ const Navigation = () => {
               ))}
             </nav>
 
-            {/* Desktop Right Icons */}
             <div className="hidden md:flex items-center space-x-4">
               <button 
                 onClick={() => setLoginOpen(true)}
@@ -92,7 +88,6 @@ const Navigation = () => {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden text-luxury-white hover:text-luxury-gold transition-colors"
               onClick={toggleMenu}
@@ -103,7 +98,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <div
           className={cn(
             "md:hidden fixed inset-0 bg-luxury-navy z-40 transform transition-transform duration-300 ease-in-out",
@@ -172,21 +166,39 @@ const Navigation = () => {
         </div>
       </header>
 
-      {/* Login Modal */}
       <LoginModal open={loginOpen} onOpenChange={setLoginOpen} />
 
-      {/* Cart Dialog (simplified for now) */}
       <Dialog open={cartOpen} onOpenChange={setCartOpen}>
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="bg-luxury-navy border border-luxury-gold/30 p-8 rounded shadow-2xl w-full max-w-md animate-fade-in">
-            <h2 className="text-2xl font-playfair mb-6 text-luxury-gold">Your Cart</h2>
-            <div className="text-center py-8">
-              <p className="text-luxury-silver mb-6">Your cart is currently empty.</p>
+          <div className="bg-luxury-navy border border-luxury-gold/30 p-8 rounded-lg shadow-2xl w-full max-w-md animate-fade-in text-center">
+            <div className="flex justify-center mb-6">
+              <ShoppingBag 
+                size={64} 
+                className="text-luxury-gold/50 animate-float" 
+              />
+            </div>
+            <h2 className="text-2xl font-playfair mb-4 text-luxury-gold">
+              Your Luxury Cart is Empty
+            </h2>
+            <p className="text-luxury-silver mb-6 text-sm">
+              Explore our exclusive collection of luxury cars and yachts. 
+              Your next remarkable journey awaits.
+            </p>
+            <div className="flex justify-center space-x-4">
               <Button 
-                className="luxury-button" 
-                onClick={() => setCartOpen(false)}
+                onClick={() => {
+                  setCartOpen(false);
+                }}
+                className="luxury-button"
               >
-                Continue Shopping
+                Explore Products
+              </Button>
+              <Button 
+                onClick={() => setCartOpen(false)}
+                variant="secondary"
+                className="luxury-button-filled"
+              >
+                Close
               </Button>
             </div>
           </div>
