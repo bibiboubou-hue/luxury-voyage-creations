@@ -1,8 +1,8 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ShoppingCart, User, ShoppingBag } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Dialog } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import LoginModal from "./LoginModal";
 
@@ -10,7 +10,6 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -80,12 +79,6 @@ const Navigation = () => {
               >
                 <User size={20} />
               </button>
-              <button 
-                onClick={() => setCartOpen(true)}
-                className="text-luxury-silver hover:text-luxury-gold transition-colors duration-300"
-              >
-                <ShoppingCart size={20} />
-              </button>
             </div>
 
             <button
@@ -140,7 +133,7 @@ const Navigation = () => {
               ))}
             </nav>
 
-            <div className="flex justify-around mt-auto mb-12">
+            <div className="flex justify-center mt-auto mb-12">
               <button 
                 onClick={() => {
                   setLoginOpen(true);
@@ -151,59 +144,12 @@ const Navigation = () => {
                 <User size={20} />
                 <span>Account</span>
               </button>
-              <button 
-                onClick={() => {
-                  setCartOpen(true);
-                  setIsOpen(false);
-                }}
-                className="flex items-center justify-center gap-2 text-luxury-silver hover:text-luxury-gold transition-colors duration-300"
-              >
-                <ShoppingCart size={20} />
-                <span>Cart</span>
-              </button>
             </div>
           </div>
         </div>
       </header>
 
       <LoginModal open={loginOpen} onOpenChange={setLoginOpen} />
-
-      <Dialog open={cartOpen} onOpenChange={setCartOpen}>
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="bg-luxury-navy border border-luxury-gold/30 p-8 rounded-lg shadow-2xl w-full max-w-md animate-fade-in text-center">
-            <div className="flex justify-center mb-6">
-              <ShoppingBag 
-                size={64} 
-                className="text-luxury-gold/50 animate-float" 
-              />
-            </div>
-            <h2 className="text-2xl font-playfair mb-4 text-luxury-gold">
-              Your Luxury Cart is Empty
-            </h2>
-            <p className="text-luxury-silver mb-6 text-sm">
-              Explore our exclusive collection of luxury cars and yachts. 
-              Your next remarkable journey awaits.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <Button 
-                onClick={() => {
-                  setCartOpen(false);
-                }}
-                className="luxury-button"
-              >
-                Explore Products
-              </Button>
-              <Button 
-                onClick={() => setCartOpen(false)}
-                variant="secondary"
-                className="luxury-button-filled"
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Dialog>
     </>
   );
 };
