@@ -14,7 +14,7 @@ const products = [
     type: "car",
     price: 180000,
     description: "The epitome of British luxury sports cars, combining elegance with raw power.",
-    image: "https://images.unsplash.com/photo-1566473965997-3de9c817e938?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617814076668-4af858bae1b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const products = [
     type: "car",
     price: 230000,
     description: "Italian excellence in automotive design, delivering performance with timeless elegance.",
-    image: "https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1610647752706-3bb12232b3dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const products = [
     type: "car",
     price: 290000,
     description: "Aggressive styling meets uncompromising performance in this Italian masterpiece.",
-    image: "https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1570733577524-3a047079e80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const products = [
     type: "car",
     price: 450000,
     description: "The pinnacle of automotive luxury and comfort, handcrafted to perfection.",
-    image: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631295868223-63265b40d9cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const products = [
     type: "car",
     price: 120000,
     description: "German engineering at its finest, offering unparalleled comfort and technology.",
-    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627454819213-0e1d5150fce0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const products = [
     type: "yacht",
     price: 5800000,
     description: "A masterpiece of design and engineering, offering unparalleled comfort at sea.",
-    image: "https://images.unsplash.com/photo-1621252179027-6fdb1f97a5b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1559034750-cdab70a66b8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const products = [
     type: "yacht",
     price: 7200000,
     description: "Italian craftsmanship meets modern design in this luxurious floating masterpiece.",
-    image: "https://images.unsplash.com/photo-1569263979104-865ab7cd0d10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1606046604972-77cc76aee944?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const products = [
     type: "yacht",
     price: 6500000,
     description: "British luxury yacht building at its finest, combining performance with elegance.",
-    image: "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1561566472-a4a2280aba4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const products = [
     type: "yacht",
     price: 4200000,
     description: "A balance of performance and luxury in a sleek, sporty package.",
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 10,
@@ -86,7 +86,7 @@ const products = [
     type: "yacht",
     price: 8100000,
     description: "Timeless Italian design combined with cutting-edge technology and materials.",
-    image: "https://images.unsplash.com/photo-1592437711211-6cec55163d95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1565775409103-68743406ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -197,12 +197,12 @@ const ProductsPage = () => {
 
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
+      {/* Hero Section with Updated Writing Style */}
       <section className="relative py-24 mb-12">
         <div 
           className="absolute inset-0 bg-fixed"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "brightness(0.3)"
@@ -211,11 +211,12 @@ const ProductsPage = () => {
         
         <div className="relative luxury-container text-center">
           <h1 className="luxury-heading mb-6 text-shadow">
-            Our <span className="gold-gradient">Collection</span>
+            Discover <span className="gold-gradient">Extraordinary</span> Masterpieces
           </h1>
-          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-luxury-silver">
-            Explore our exclusive range of luxury vehicles, each representing the pinnacle of
-            engineering, design, and craftsmanship.
+          <p className="luxury-paragraph max-w-3xl mx-auto mb-8 text-luxury-silver">
+            Step into a world where engineering meets artistry. Each vehicle in our meticulously curated collection 
+            represents decades of tradition, innovation, and uncompromising excellence. This isn't merely transportation—it's 
+            the embodiment of aspiration and achievement.
           </p>
         </div>
       </section>
