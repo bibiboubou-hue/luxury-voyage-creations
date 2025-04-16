@@ -1,0 +1,86 @@
+
+// Mock product data
+export const products = [
+  {
+    id: 1,
+    name: "Aston Martin Vantage",
+    type: "car",
+    price: 180000,
+    description: "The epitome of British luxury sports cars, combining elegance with raw power.",
+    image: "https://images.unsplash.com/photo-1592853598064-a32b3d4b61a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 2,
+    name: "Ferrari Roma",
+    type: "car",
+    price: 230000,
+    description: "Italian excellence in automotive design, delivering performance with timeless elegance.",
+    image: "https://images.unsplash.com/photo-1592840062661-a5a7f78e2056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 3,
+    name: "Lamborghini Huracan",
+    type: "car",
+    price: 290000,
+    description: "Aggressive styling meets uncompromising performance in this Italian masterpiece.",
+    image: "https://images.unsplash.com/photo-1570733577524-3a047079e80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 4,
+    name: "Rolls-Royce Phantom",
+    type: "car",
+    price: 450000,
+    description: "The pinnacle of automotive luxury and comfort, handcrafted to perfection.",
+    image: "https://images.unsplash.com/photo-1631194758628-71ec7c35137e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 5,
+    name: "Mercedes-Benz S-Class",
+    type: "car",
+    price: 120000,
+    description: "German engineering at its finest, offering unparalleled comfort and technology.",
+    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 6,
+    name: "Azimut Grande 35",
+    type: "yacht",
+    price: 5800000,
+    description: "A masterpiece of design and engineering, offering unparalleled comfort at sea.",
+    image: "https://images.unsplash.com/photo-1559034750-cdab70a66b8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 7,
+    name: "Ferretti Yachts 920",
+    type: "yacht",
+    price: 7200000,
+    description: "Italian craftsmanship meets modern design in this luxurious floating masterpiece.",
+    image: "https://images.unsplash.com/photo-1606046604972-77cc76aee944?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 8,
+    name: "Princess Y85",
+    type: "yacht",
+    price: 6500000,
+    description: "British luxury yacht building at its finest, combining performance with elegance.",
+    image: "https://images.unsplash.com/photo-1599772310271-5965654bb276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 9,
+    name: "Sunseeker Predator 74",
+    type: "yacht",
+    price: 4200000,
+    description: "A balance of performance and luxury in a sleek, sporty package.",
+    image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 10,
+    name: "Riva 90 Argo",
+    type: "yacht",
+    price: 8100000,
+    description: "Timeless Italian design combined with cutting-edge technology and materials.",
+    image: "https://images.unsplash.com/photo-1591017403321-dc264d324652?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+export default products;
