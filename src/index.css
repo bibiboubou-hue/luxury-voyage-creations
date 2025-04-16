@@ -8,33 +8,33 @@
 
 @layer base {
   :root {
-    --background: 223 90% 5%;
+    --background: 210 30% 15%;
     --foreground: 210 40% 98%;
 
-    --card: 223 90% 4%;
+    --card: 210 30% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 223 90% 4%;
+    --popover: 210 30% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 30% 30%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 40 20% 75%;
+    --secondary-foreground: 210 30% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 20% 25%;
+    --muted-foreground: 210 20% 80%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 210 25% 40%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 25% 25%;
+    --input: 210 25% 25%;
+    --ring: 210 30% 50%;
     
     --radius: 0.5rem;
   }
@@ -46,7 +46,7 @@
   }
 
   body {
-    @apply bg-luxury-black text-luxury-white font-montserrat overflow-x-hidden;
+    @apply bg-nautical-darknavy text-nautical-white font-montserrat overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -72,11 +72,11 @@
   }
   
   .luxury-button {
-    @apply px-6 py-3 text-sm font-medium transition-all duration-300 border border-luxury-gold text-luxury-gold hover:bg-luxury-gold/10 rounded-none;
+    @apply px-6 py-3 text-sm font-medium transition-all duration-300 border border-nautical-blue text-nautical-lightblue hover:bg-nautical-blue/10 rounded-none;
   }
   
   .luxury-button-filled {
-    @apply px-6 py-3 text-sm font-medium transition-all duration-300 bg-luxury-gold text-luxury-black border border-luxury-gold hover:bg-luxury-gold/90 rounded-none;
+    @apply px-6 py-3 text-sm font-medium transition-all duration-300 bg-nautical-blue text-nautical-white border border-nautical-blue hover:bg-nautical-blue/90 rounded-none;
   }
   
   .section-padding {
@@ -84,11 +84,11 @@
   }
   
   .luxury-card {
-    @apply bg-luxury-navy border border-luxury-gold/20 overflow-hidden transition-all duration-500 hover:border-luxury-gold/50;
+    @apply bg-nautical-navy border border-nautical-blue/20 overflow-hidden transition-all duration-500 hover:border-nautical-blue/50;
   }
   
   .luxury-input {
-    @apply w-full py-3 px-4 bg-transparent border border-luxury-gold/30 text-luxury-white focus:border-luxury-gold/70 focus:outline-none;
+    @apply w-full py-3 px-4 bg-transparent border border-nautical-blue/30 text-nautical-white focus:border-nautical-blue/70 focus:outline-none;
   }
   
   .hover-3d {
@@ -112,8 +112,8 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-.gold-gradient {
-  background: linear-gradient(90deg, #D4AF37 0%, #F4E7BA 50%, #D4AF37 100%);
+.blue-gradient {
+  background: linear-gradient(90deg, #345980 0%, #A8C1D9 50%, #345980 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -168,13 +168,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #070A14;
+  background: #1A2A40;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: #345980;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C0C0C0;
+  background: #D2C4B0;
 }

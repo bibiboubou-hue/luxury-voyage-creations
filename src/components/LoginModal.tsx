@@ -23,8 +23,8 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
     toast({
       title: isLoginForm ? "Login Successful" : "Registration Successful",
       description: isLoginForm 
-        ? "Welcome back to Luxury Voyage."
-        : "Welcome to Luxury Voyage. Your account has been created.",
+        ? "Welcome back to Nautical Voyage."
+        : "Welcome to Nautical Voyage. Your account has been created.",
       duration: 3000,
     });
     
@@ -46,9 +46,9 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-luxury-navy border border-luxury-gold/30 p-0 sm:max-w-md">
+      <DialogContent className="bg-nautical-navy border border-nautical-blue/30 p-0 sm:max-w-md">
         <DialogHeader className="pt-8 px-6">
-          <DialogTitle className="text-center text-2xl font-playfair text-luxury-gold">
+          <DialogTitle className="text-center text-2xl font-playfair text-nautical-lightblue">
             {isLoginForm ? "Welcome Back" : "Create an Account"}
           </DialogTitle>
         </DialogHeader>
@@ -57,7 +57,7 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLoginForm && (
               <div className="space-y-2">
-                <label className="text-sm text-luxury-silver" htmlFor="name">
+                <label className="text-sm text-nautical-sand" htmlFor="name">
                   Full Name
                 </label>
                 <input
@@ -73,7 +73,7 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
             )}
             
             <div className="space-y-2">
-              <label className="text-sm text-luxury-silver" htmlFor="email">
+              <label className="text-sm text-nautical-sand" htmlFor="email">
                 Email
               </label>
               <input
@@ -88,7 +88,7 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
             </div>
             
             <div className="space-y-2">
-              <label className="text-sm text-luxury-silver" htmlFor="password">
+              <label className="text-sm text-nautical-sand" htmlFor="password">
                 Password
               </label>
               <input
@@ -106,7 +106,7 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
               <div className="text-right">
                 <button
                   type="button"
-                  className="text-sm text-luxury-silver hover:text-luxury-gold transition-colors"
+                  className="text-sm text-nautical-sand hover:text-nautical-lightblue transition-colors"
                 >
                   Forgot password?
                 </button>
@@ -121,12 +121,12 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
           </form>
           
           <div className="mt-6 text-center">
-            <p className="text-luxury-silver text-sm">
+            <p className="text-nautical-sand text-sm">
               {isLoginForm ? "Don't have an account?" : "Already have an account?"}
               <button
                 type="button"
                 onClick={toggleForm}
-                className="ml-1 text-luxury-gold hover:underline"
+                className="ml-1 text-nautical-lightblue hover:underline"
               >
                 {isLoginForm ? "Sign Up" : "Sign In"}
               </button>

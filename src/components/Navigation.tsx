@@ -45,14 +45,14 @@ const Navigation = () => {
       <header
         className={cn(
           "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-          isScrolled ? "nav-blur bg-luxury-black/70 border-b border-luxury-gold/20" : "bg-transparent"
+          isScrolled ? "nav-blur bg-nautical-darknavy/70 border-b border-nautical-blue/20" : "bg-transparent"
         )}
       >
         <div className="luxury-container">
           <div className="flex justify-between items-center py-4">
             <Link to="/" className="flex items-center gap-2">
-              <span className="text-2xl font-playfair font-bold gold-gradient">LUXURY</span>
-              <span className="text-sm font-light text-luxury-silver uppercase tracking-widest">VOYAGE</span>
+              <span className="text-2xl font-playfair font-bold blue-gradient">NAUTICAL</span>
+              <span className="text-sm font-light text-nautical-lightblue uppercase tracking-widest">VOYAGE</span>
             </Link>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -63,8 +63,8 @@ const Navigation = () => {
                   className={cn(
                     "transition-colors duration-300 link-underline text-sm uppercase tracking-wider",
                     location.pathname === link.path
-                      ? "text-luxury-gold"
-                      : "text-luxury-white hover:text-luxury-gold"
+                      ? "text-nautical-lightblue"
+                      : "text-nautical-white hover:text-nautical-lightblue"
                   )}
                 >
                   {link.title}
@@ -75,14 +75,14 @@ const Navigation = () => {
             <div className="hidden md:flex items-center space-x-4">
               <button 
                 onClick={() => setLoginOpen(true)}
-                className="text-luxury-silver hover:text-luxury-gold transition-colors duration-300"
+                className="text-nautical-lightblue hover:text-nautical-white transition-colors duration-300"
               >
                 <User size={20} />
               </button>
             </div>
 
             <button
-              className="md:hidden text-luxury-white hover:text-luxury-gold transition-colors"
+              className="md:hidden text-nautical-white hover:text-nautical-lightblue transition-colors"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -93,7 +93,7 @@ const Navigation = () => {
 
         <div
           className={cn(
-            "md:hidden fixed inset-0 bg-luxury-navy z-40 transform transition-transform duration-300 ease-in-out",
+            "md:hidden fixed inset-0 bg-nautical-navy z-40 transform transition-transform duration-300 ease-in-out",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -101,13 +101,13 @@ const Navigation = () => {
             <div className="flex justify-between items-center mb-8">
               <Link 
                 to="/" 
-                className="text-2xl font-playfair font-bold gold-gradient"
+                className="text-2xl font-playfair font-bold blue-gradient"
                 onClick={() => setIsOpen(false)}
               >
-                LUXURY VOYAGE
+                NAUTICAL VOYAGE
               </Link>
               <button
-                className="text-luxury-white hover:text-luxury-gold transition-colors"
+                className="text-nautical-white hover:text-nautical-lightblue transition-colors"
                 onClick={toggleMenu}
                 aria-label="Close menu"
               >
@@ -122,10 +122,10 @@ const Navigation = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-lg uppercase tracking-wider transition-colors duration-300 py-2 border-b border-luxury-gold/20",
+                    "text-lg uppercase tracking-wider transition-colors duration-300 py-2 border-b border-nautical-blue/20",
                     location.pathname === link.path
-                      ? "text-luxury-gold"
-                      : "text-luxury-white hover:text-luxury-gold"
+                      ? "text-nautical-lightblue"
+                      : "text-nautical-white hover:text-nautical-lightblue"
                   )}
                 >
                   {link.title}
@@ -139,7 +139,7 @@ const Navigation = () => {
                   setLoginOpen(true);
                   setIsOpen(false);
                 }}
-                className="flex items-center justify-center gap-2 text-luxury-silver hover:text-luxury-gold transition-colors duration-300"
+                className="flex items-center justify-center gap-2 text-nautical-lightblue hover:text-nautical-white transition-colors duration-300"
               >
                 <User size={20} />
                 <span>Account</span>

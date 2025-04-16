@@ -127,24 +127,24 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
             onError={handleImageError}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-luxury-navy/50">
+          <div className="w-full h-full flex items-center justify-center bg-nautical-navy/50">
             <div className="text-center">
-              <ImageOff className="h-16 w-16 mx-auto text-luxury-gold/50 mb-2" />
-              <p className="text-sm text-luxury-silver">Image unavailable</p>
+              <ImageOff className="h-16 w-16 mx-auto text-nautical-blue/50 mb-2" />
+              <p className="text-sm text-nautical-sand">Image unavailable</p>
             </div>
           </div>
         )}
-        <div className="absolute top-4 right-4 bg-luxury-gold text-luxury-black px-3 py-1 text-xs uppercase font-medium">
+        <div className="absolute top-4 right-4 bg-nautical-blue text-nautical-white px-3 py-1 text-xs uppercase font-medium">
           {product.type}
         </div>
       </div>
       <div className="p-6 card-3d-content">
         <h3 className="text-xl font-playfair font-bold mb-2">{product.name}</h3>
-        <p className="text-luxury-silver text-sm mb-4">
+        <p className="text-nautical-sand text-sm mb-4">
           {product.description}
         </p>
         <div className="flex justify-between items-center">
-          <span className="text-luxury-gold font-semibold">${product.price.toLocaleString()}</span>
+          <span className="text-nautical-lightblue font-semibold">${product.price.toLocaleString()}</span>
           <Button className="luxury-button text-sm">View Details</Button>
         </div>
       </div>
@@ -211,27 +211,27 @@ const ProductsPage = () => {
         
         <div className="relative luxury-container text-center">
           <h1 className="luxury-heading mb-6 text-shadow">
-            Discover <span className="gold-gradient">Extraordinary</span> Masterpieces
+            Discover <span className="blue-gradient">Exceptional</span> Craftsmanship
           </h1>
-          <p className="luxury-paragraph max-w-3xl mx-auto mb-8 text-luxury-silver">
-            Step into a world where engineering meets artistry. Each vehicle in our meticulously curated collection 
-            represents decades of tradition, innovation, and uncompromising excellence. This isn't merely transportation—it's 
-            the embodiment of aspiration and achievement.
+          <p className="luxury-paragraph max-w-3xl mx-auto mb-8 text-nautical-sand">
+            Immerse yourself in a collection of nautical excellence. Our carefully curated selection
+            represents the pinnacle of engineering precision and artistic design. These aren't merely
+            vessels—they're statements of achievement and refinement.
           </p>
         </div>
       </section>
       
       {/* Products Section */}
-      <section className="section-padding bg-luxury-black">
+      <section className="section-padding bg-nautical-darknavy">
         <div className="luxury-container">
           {/* Filter Controls */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
               <Tabs defaultValue="all" className="w-full mb-6 md:mb-0 md:w-auto" onValueChange={setActiveTab}>
-                <TabsList className="bg-luxury-navy border border-luxury-gold/20">
-                  <TabsTrigger value="all" className="data-[state=active]:bg-luxury-gold data-[state=active]:text-luxury-black">All</TabsTrigger>
-                  <TabsTrigger value="car" className="data-[state=active]:bg-luxury-gold data-[state=active]:text-luxury-black">Cars</TabsTrigger>
-                  <TabsTrigger value="yacht" className="data-[state=active]:bg-luxury-gold data-[state=active]:text-luxury-black">Yachts</TabsTrigger>
+                <TabsList className="bg-nautical-navy border border-nautical-blue/20">
+                  <TabsTrigger value="all" className="data-[state=active]:bg-nautical-blue data-[state=active]:text-nautical-white">All</TabsTrigger>
+                  <TabsTrigger value="car" className="data-[state=active]:bg-nautical-blue data-[state=active]:text-nautical-white">Cars</TabsTrigger>
+                  <TabsTrigger value="yacht" className="data-[state=active]:bg-nautical-blue data-[state=active]:text-nautical-white">Yachts</TabsTrigger>
                 </TabsList>
               </Tabs>
               
@@ -249,7 +249,7 @@ const ProductsPage = () => {
                   <select
                     value={sortOrder}
                     onChange={(e) => setSortOrder(e.target.value)}
-                    className="bg-luxury-navy border border-luxury-gold/30 text-luxury-white py-2 pl-4 pr-10 appearance-none focus:outline-none focus:border-luxury-gold/70"
+                    className="bg-nautical-navy border border-nautical-blue/30 text-nautical-white py-2 pl-4 pr-10 appearance-none focus:outline-none focus:border-nautical-blue/70"
                   >
                     <option value="default">Default Sorting</option>
                     <option value="price-asc">Price: Low to High</option>
@@ -257,7 +257,7 @@ const ProductsPage = () => {
                     <option value="name-asc">Name: A to Z</option>
                     <option value="name-desc">Name: Z to A</option>
                   </select>
-                  <ArrowUpDown className="absolute right-3 h-4 w-4 pointer-events-none text-luxury-gold" />
+                  <ArrowUpDown className="absolute right-3 h-4 w-4 pointer-events-none text-nautical-blue" />
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@ const ProductsPage = () => {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="bg-luxury-navy border border-luxury-gold/20 p-6 mb-8"
+                className="bg-nautical-navy border border-nautical-blue/20 p-6 mb-8"
               >
                 <h3 className="text-lg font-playfair mb-4">Price Range</h3>
                 <div className="mb-6">
@@ -282,7 +282,7 @@ const ProductsPage = () => {
                     onValueChange={setPriceRange}
                   />
                 </div>
-                <div className="flex justify-between text-sm text-luxury-silver">
+                <div className="flex justify-between text-sm text-nautical-sand">
                   <span>{formatPrice(priceRange[0])}</span>
                   <span>{formatPrice(priceRange[1])}</span>
                 </div>
@@ -300,7 +300,7 @@ const ProductsPage = () => {
           ) : (
             <div className="text-center py-20">
               <h3 className="text-xl font-playfair mb-4">No Products Found</h3>
-              <p className="text-luxury-silver mb-6">
+              <p className="text-nautical-sand mb-6">
                 No products match your current filter criteria. Try adjusting your filters.
               </p>
               <Button 
@@ -319,12 +319,12 @@ const ProductsPage = () => {
       </section>
       
       {/* Call to Action */}
-      <section className="section-padding bg-luxury-navy">
+      <section className="section-padding bg-nautical-navy">
         <div className="luxury-container text-center">
           <h2 className="luxury-subheading mb-6">
-            <span className="gold-gradient">Personalized Consultation</span>
+            <span className="blue-gradient">Personalized Consultation</span>
           </h2>
-          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-luxury-silver">
+          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-nautical-sand">
             Our product specialists are available to provide personalized guidance
             and answer any questions about our exclusive collection.
           </p>

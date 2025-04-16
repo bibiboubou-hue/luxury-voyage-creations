@@ -25,11 +25,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				luxury: {
-					navy: "#0A1128",
-					black: "#070A14",
-					gold: "#D4AF37",
-					silver: "#C0C0C0",
+				nautical: {
+					navy: "#1A2A40",
+					darknavy: "#0A1525",
+					blue: "#345980",
+					lightblue: "#E5EDF5",
+					brown: "#D2C4B0",
+					sand: "#F5F0E8",
 					white: "#F8F9FA"
 				},
 				primary: {
