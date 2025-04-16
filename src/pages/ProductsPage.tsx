@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
-import { ChevronDown, ArrowUpDown, Filter, ImageOff } from "lucide-react";
+import { ChevronDown, ArrowUpDown, Filter, ImageOff, Anchor, ShoppingBag } from "lucide-react";
 
 // Mock product data
 const products = [
@@ -112,7 +112,7 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
 
   return (
     <motion.div 
-      className="luxury-card card-3d overflow-hidden"
+      className="luxury-card card-3d"
       initial="hidden"
       animate="visible"
       custom={index}
@@ -134,7 +134,7 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
             </div>
           </div>
         )}
-        <div className="absolute top-4 right-4 bg-nautical-blue text-nautical-white px-3 py-1 text-xs uppercase font-medium">
+        <div className="absolute top-4 right-4 bg-nautical-blue text-nautical-white px-3 py-1 text-xs uppercase font-medium rounded-sm">
           {product.type}
         </div>
       </div>
@@ -145,7 +145,12 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
         </p>
         <div className="flex justify-between items-center">
           <span className="text-nautical-lightblue font-semibold">${product.price.toLocaleString()}</span>
-          <Button className="luxury-button text-sm">View Details</Button>
+          <div className="flex gap-2">
+            <button className="p-2 bg-transparent border border-nautical-blue/30 text-nautical-lightblue rounded-md hover:bg-nautical-blue/10 transition-all">
+              <ShoppingBag size={18} />
+            </button>
+            <Button className="luxury-button text-sm">View Details</Button>
+          </div>
         </div>
       </div>
     </motion.div>
@@ -211,13 +216,17 @@ const ProductsPage = () => {
         
         <div className="relative luxury-container text-center">
           <h1 className="luxury-heading mb-6 text-shadow">
-            Discover <span className="blue-gradient">Exceptional</span> Craftsmanship
+            Experience <span className="blue-gradient">Unparalleled</span> Craftsmanship
           </h1>
           <p className="luxury-paragraph max-w-3xl mx-auto mb-8 text-nautical-sand">
-            Immerse yourself in a collection of nautical excellence. Our carefully curated selection
-            represents the pinnacle of engineering precision and artistic design. These aren't merely
-            vessels—they're statements of achievement and refinement.
+            Immerse yourself in a collection that represents the pinnacle of engineering precision and artistic design. 
+            Each vehicle and vessel in our exclusive portfolio has been meticulously selected to meet our exacting standards 
+            of quality and performance.
           </p>
+          <Button className="luxury-button-filled flex items-center gap-2">
+            <Anchor className="h-4 w-4" />
+            <span>Explore Collection</span>
+          </Button>
         </div>
       </section>
       
@@ -249,7 +258,7 @@ const ProductsPage = () => {
                   <select
                     value={sortOrder}
                     onChange={(e) => setSortOrder(e.target.value)}
-                    className="bg-nautical-navy border border-nautical-blue/30 text-nautical-white py-2 pl-4 pr-10 appearance-none focus:outline-none focus:border-nautical-blue/70"
+                    className="bg-nautical-navy border border-nautical-blue/30 text-nautical-white py-2 pl-4 pr-10 appearance-none focus:outline-none focus:border-nautical-blue/70 rounded-md"
                   >
                     <option value="default">Default Sorting</option>
                     <option value="price-asc">Price: Low to High</option>
@@ -269,7 +278,7 @@ const ProductsPage = () => {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="bg-nautical-navy border border-nautical-blue/20 p-6 mb-8"
+                className="bg-nautical-navy border border-nautical-blue/20 p-6 mb-8 rounded-lg"
               >
                 <h3 className="text-lg font-playfair mb-4">Price Range</h3>
                 <div className="mb-6">
