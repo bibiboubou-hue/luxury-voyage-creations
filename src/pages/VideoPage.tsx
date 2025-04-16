@@ -42,9 +42,9 @@ const VideoPage = () => {
         
         <div className="relative luxury-container text-center">
           <h1 className="luxury-heading mb-6 text-shadow">
-            Experience <span className="gold-gradient">Luxury</span>
+            Experience <span className="blue-gradient">Luxury</span>
           </h1>
-          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-luxury-silver">
+          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-nautical-sand">
             Immerse yourself in the world of exceptional luxury vehicles
             through our cinematic showcase.
           </p>
@@ -52,10 +52,10 @@ const VideoPage = () => {
       </section>
       
       {/* Main Video Section */}
-      <section className="section-padding bg-luxury-black">
+      <section className="section-padding bg-nautical-darknavy">
         <div className="luxury-container">
           <motion.div
-            className="relative aspect-video bg-luxury-navy border border-luxury-gold/30 overflow-hidden"
+            className="relative aspect-video bg-nautical-navy border border-nautical-blue/30 overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -83,7 +83,7 @@ const VideoPage = () => {
             
             {/* Play/Pause button */}
             <button
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 flex items-center justify-center bg-luxury-gold/20 hover:bg-luxury-gold/50 backdrop-blur-md rounded-full transition-all duration-300 border border-luxury-gold/50"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 flex items-center justify-center bg-nautical-blue/20 hover:bg-nautical-blue/50 backdrop-blur-md rounded-full transition-all duration-300 border border-nautical-blue/50"
               onClick={togglePlay}
               aria-label={isPlaying ? "Pause video" : "Play video"}
             >
@@ -95,9 +95,9 @@ const VideoPage = () => {
             </button>
             
             {/* Video controls */}
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between px-4 py-2 bg-luxury-black/60 backdrop-blur-sm border border-luxury-gold/20">
+            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between px-4 py-2 bg-nautical-darknavy/60 backdrop-blur-sm border border-nautical-blue/20">
               <button
-                className="text-luxury-silver hover:text-luxury-gold transition-colors"
+                className="text-nautical-sand hover:text-nautical-blue transition-colors"
                 onClick={togglePlay}
                 aria-label={isPlaying ? "Pause video" : "Play video"}
               >
@@ -109,9 +109,9 @@ const VideoPage = () => {
               </button>
               
               <div className="flex items-center">
-                <span className="text-luxury-silver text-xs mr-2">Luxury Voyage Showcase</span>
+                <span className="text-nautical-sand text-xs mr-2">Luxury Voyage Showcase</span>
                 <button
-                  className="text-luxury-silver hover:text-luxury-gold transition-colors"
+                  className="text-nautical-sand hover:text-nautical-blue transition-colors"
                   onClick={toggleMute}
                   aria-label={isMuted ? "Unmute video" : "Mute video"}
                 >
@@ -127,7 +127,7 @@ const VideoPage = () => {
           
           <div className="mt-8">
             <h2 className="text-2xl font-playfair font-bold mb-4">Luxury Voyage: A Journey Beyond Ordinary</h2>
-            <p className="text-luxury-silver mb-6">
+            <p className="text-nautical-sand mb-6">
               This cinematic showcase presents our exclusive collection of luxury vehicles, 
               highlighting the exceptional craftsmanship, performance, and design that sets us apart. 
               From the sleek lines of our custom automobiles to the majestic presence of our yachts, 
@@ -138,13 +138,13 @@ const VideoPage = () => {
       </section>
       
       {/* Additional Videos Section */}
-      <section className="section-padding bg-luxury-navy">
+      <section className="section-padding bg-nautical-navy">
         <div className="luxury-container">
           <div className="text-center mb-16">
-            <h2 className="luxury-subheading mb-4 gold-gradient">
+            <h2 className="luxury-subheading mb-4 blue-gradient">
               Additional Showcases
             </h2>
-            <p className="luxury-paragraph max-w-2xl mx-auto text-luxury-silver">
+            <p className="luxury-paragraph max-w-2xl mx-auto text-nautical-sand">
               Explore more videos highlighting our exclusive collection and the luxury lifestyle.
             </p>
           </div>
@@ -169,7 +169,7 @@ const VideoPage = () => {
             ].map((video, index) => (
               <motion.div 
                 key={video.title}
-                className="group relative aspect-video bg-luxury-black border border-luxury-gold/20 overflow-hidden cursor-pointer hover-3d"
+                className="group relative aspect-video bg-nautical-darknavy border border-nautical-blue/20 overflow-hidden cursor-pointer hover-3d"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -180,17 +180,17 @@ const VideoPage = () => {
                   alt={video.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-luxury-black/40 group-hover:bg-luxury-black/20 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-nautical-darknavy/40 group-hover:bg-nautical-darknavy/20 transition-colors duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold/20 group-hover:bg-luxury-gold/50 backdrop-blur-md rounded-full transition-all duration-300 border border-luxury-gold/50">
+                  <div className="w-16 h-16 flex items-center justify-center bg-nautical-blue/20 group-hover:bg-nautical-blue/50 backdrop-blur-md rounded-full transition-all duration-300 border border-nautical-blue/50">
                     <Play className="w-6 h-6 text-white ml-1" />
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-luxury-black to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-nautical-darknavy to-transparent">
                   <h3 className="text-lg font-playfair font-bold mb-1">{video.title}</h3>
                   <div className="flex justify-between items-center">
-                    <span className="text-luxury-silver text-xs">Luxury Voyage</span>
-                    <span className="text-luxury-silver text-xs">{video.duration}</span>
+                    <span className="text-nautical-sand text-xs">Luxury Voyage</span>
+                    <span className="text-nautical-sand text-xs">{video.duration}</span>
                   </div>
                 </div>
               </motion.div>
@@ -213,9 +213,9 @@ const VideoPage = () => {
         
         <div className="relative luxury-container text-center">
           <h2 className="luxury-heading mb-6 text-shadow">
-            Experience It <span className="gold-gradient">In Person</span>
+            Experience It <span className="blue-gradient">In Person</span>
           </h2>
-          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-luxury-silver">
+          <p className="luxury-paragraph max-w-2xl mx-auto mb-8 text-nautical-sand">
             While our videos showcase the beauty of our collection, nothing compares to experiencing 
             these extraordinary vehicles in person. Schedule a private viewing at our showroom.
           </p>

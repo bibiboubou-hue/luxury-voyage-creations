@@ -120,6 +120,14 @@
   text-fill-color: transparent;
 }
 
+.gold-gradient {
+  background: linear-gradient(90deg, #345980 0%, #A8C1D9 50%, #345980 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -14,7 +14,7 @@ const products = [
     type: "car",
     price: 180000,
     description: "The epitome of British luxury sports cars, combining elegance with raw power.",
-    image: "https://images.unsplash.com/photo-1617814076668-4af858bae1b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1592853598064-a32b3d4b61a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const products = [
     type: "car",
     price: 230000,
     description: "Italian excellence in automotive design, delivering performance with timeless elegance.",
-    image: "https://images.unsplash.com/photo-1610647752706-3bb12232b3dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1592840062661-a5a7f78e2056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const products = [
     type: "car",
     price: 450000,
     description: "The pinnacle of automotive luxury and comfort, handcrafted to perfection.",
-    image: "https://images.unsplash.com/photo-1631295868223-63265b40d9cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631194758628-71ec7c35137e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const products = [
     type: "car",
     price: 120000,
     description: "German engineering at its finest, offering unparalleled comfort and technology.",
-    image: "https://images.unsplash.com/photo-1627454819213-0e1d5150fce0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const products = [
     type: "yacht",
     price: 6500000,
     description: "British luxury yacht building at its finest, combining performance with elegance.",
-    image: "https://images.unsplash.com/photo-1561566472-a4a2280aba4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599772310271-5965654bb276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ const products = [
     type: "yacht",
     price: 8100000,
     description: "Timeless Italian design combined with cutting-edge technology and materials.",
-    image: "https://images.unsplash.com/photo-1565775409103-68743406ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1591017403321-dc264d324652?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
