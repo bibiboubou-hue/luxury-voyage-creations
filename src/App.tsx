@@ -12,6 +12,7 @@ import TeamPage from "./pages/TeamPage";
 import VideoPage from "./pages/VideoPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import FerrariRomaGenerator from "./components/FerrariRomaGenerator";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/team" element={<TeamPage />} />
           <Route path="/video" element={<VideoPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ferrari-roma" element={<FerrariRomaGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
