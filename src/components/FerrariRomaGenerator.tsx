@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { RunwareService } from '@/services/runwareService';
@@ -29,6 +28,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
+import ImageSkeletonLoader from "@/components/ui/ImageSkeletonLoader";
 
 const FerrariRomaGenerator: React.FC = () => {
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
@@ -38,7 +38,6 @@ const FerrariRomaGenerator: React.FC = () => {
   const [showApiKeyInput, setShowApiKeyInput] = useState<boolean>(!localStorage.getItem('runwareApiKey'));
   const [availableModels, setAvailableModels] = useState<string[]>([]);
   
-  // Customization options
   const [selectedModel, setSelectedModel] = useState<string>('runware:100@1');
   const [carColor, setCarColor] = useState<string>('metallic silver');
   const [backgroundType, setBackgroundType] = useState<string>('studio');
@@ -49,7 +48,6 @@ const FerrariRomaGenerator: React.FC = () => {
   const [negativePrompt, setNegativePrompt] = useState<string>('blurry, low quality, distorted, deformed');
   
   useEffect(() => {
-    // Load available models if API key is set
     if (apiKey) {
       const runwareService = new RunwareService(apiKey);
       runwareService.getAvailableModels()
@@ -64,7 +62,6 @@ const FerrariRomaGenerator: React.FC = () => {
       setShowApiKeyInput(false);
       toast.success('API Key saved successfully!');
       
-      // Load models after saving API key
       const runwareService = new RunwareService(apiKey);
       runwareService.getAvailableModels()
         .then(models => setAvailableModels(models))
@@ -90,7 +87,6 @@ const FerrariRomaGenerator: React.FC = () => {
     try {
       const runwareService = new RunwareService(apiKey);
       
-      // Build the base prompt
       let basePrompt = customPrompt || "Ferrari Roma, sleek Italian sports car";
       
       const imageUrl = await runwareService.generateImage({
@@ -106,7 +102,6 @@ const FerrariRomaGenerator: React.FC = () => {
 
       setGeneratedImage(imageUrl);
       
-      // Add to history
       setHistory(prev => [imageUrl, ...prev].slice(0, 5));
       
       toast.success('Ferrari Roma image generated successfully!');
@@ -152,9 +147,9 @@ const FerrariRomaGenerator: React.FC = () => {
 
   return (
     <div className="container mx-auto p-8">
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-playfair font-bold mb-4 blue-gradient">Ferrari Roma Image Generator</h1>
-        <p className="text-nautical-sand mb-6">Create stunning renders of the Ferrari Roma with AI</p>
+      <div className="text-center mb-8 fade-in">
+        <h1 className="text-4xl font-playfair font-bold mb-4 blue-gradient drop-shadow-xl animate__animated animate__fadeInDown">Ferrari Roma Image Generator</h1>
+        <p className="text-nautical-sand mb-6 fade-in" style={{ animationDelay: "100ms" }}>Create stunning renders of the Ferrari Roma with AI</p>
       </div>
 
       {showApiKeyInput ? (
@@ -184,7 +179,7 @@ const FerrariRomaGenerator: React.FC = () => {
         </div>
       )}
 
-      <Tabs defaultValue="basic" className="mb-8">
+      <Tabs defaultValue="basic" className="mb-8 fade-in" style={{ animationDelay: "150ms" }}>
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="basic">Basic Options</TabsTrigger>
           <TabsTrigger value="advanced">Advanced Options</TabsTrigger>
@@ -195,10 +190,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="carColor">Car Color</Label>
               <Select value={carColor} onValueChange={setCarColor}>
-                <SelectTrigger id="carColor">
+                <SelectTrigger id="carColor" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select color" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   <SelectItem value="metallic silver">Silver Metallic</SelectItem>
                   <SelectItem value="rosso corsa red">Rosso Corsa Red</SelectItem>
                   <SelectItem value="midnight blue">Midnight Blue</SelectItem>
@@ -212,10 +207,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="backgroundType">Background</Label>
               <Select value={backgroundType} onValueChange={setBackgroundType}>
-                <SelectTrigger id="backgroundType">
+                <SelectTrigger id="backgroundType" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select background" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   <SelectItem value="studio">Studio</SelectItem>
                   <SelectItem value="coastal road">Coastal Road</SelectItem>
                   <SelectItem value="city street">City Street</SelectItem>
@@ -229,10 +224,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="viewAngle">View Angle</Label>
               <Select value={viewAngle} onValueChange={setViewAngle}>
-                <SelectTrigger id="viewAngle">
+                <SelectTrigger id="viewAngle" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select view angle" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   <SelectItem value="front 3/4">Front 3/4</SelectItem>
                   <SelectItem value="rear 3/4">Rear 3/4</SelectItem>
                   <SelectItem value="side profile">Side Profile</SelectItem>
@@ -246,10 +241,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="imageStyle">Image Style</Label>
               <Select value={imageStyle} onValueChange={setImageStyle}>
-                <SelectTrigger id="imageStyle">
+                <SelectTrigger id="imageStyle" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select style" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   <SelectItem value="photorealistic">Photorealistic</SelectItem>
                   <SelectItem value="cinematic">Cinematic</SelectItem>
                   <SelectItem value="magazine advertisement">Magazine Ad</SelectItem>
@@ -281,10 +276,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="lightingStyle">Lighting</Label>
               <Select value={lightingStyle} onValueChange={setLightingStyle}>
-                <SelectTrigger id="lightingStyle">
+                <SelectTrigger id="lightingStyle" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select lighting" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   <SelectItem value="professional studio">Studio</SelectItem>
                   <SelectItem value="golden hour">Golden Hour</SelectItem>
                   <SelectItem value="dramatic spot">Dramatic Spot</SelectItem>
@@ -298,10 +293,10 @@ const FerrariRomaGenerator: React.FC = () => {
             <div>
               <Label htmlFor="model">AI Model</Label>
               <Select value={selectedModel} onValueChange={setSelectedModel}>
-                <SelectTrigger id="model">
+                <SelectTrigger id="model" className="!bg-nautical-navy !z-30">
                   <SelectValue placeholder="Select model" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="!bg-nautical-navy !z-50">
                   {availableModels.length > 0 ? (
                     availableModels.map(model => (
                       <SelectItem key={model} value={model}>
@@ -333,7 +328,7 @@ const FerrariRomaGenerator: React.FC = () => {
         <Button 
           onClick={generateFerrariRomaImage}
           disabled={isLoading}
-          className="luxury-button-filled glow-on-hover w-full max-w-md"
+          className="luxury-button-filled glow-on-hover w-full max-w-md transition-all duration-200 hover:scale-105"
           size="lg"
         >
           {isLoading ? (
@@ -350,64 +345,69 @@ const FerrariRomaGenerator: React.FC = () => {
         </Button>
       </div>
 
-      {generatedImage && (
-        <div className="fade-in">
-          <Card className="luxury-card overflow-hidden mb-8">
-            <CardContent className="p-0">
-              <div className="relative">
-                <img 
-                  src={generatedImage} 
-                  alt="Generated Ferrari Roma" 
-                  className="w-full h-auto hover-3d"
-                />
-                <div className="absolute bottom-0 right-0 p-4 flex gap-2">
-                  <Button 
-                    onClick={downloadImage}
-                    variant="secondary"
-                    size="sm"
-                  >
-                    <Download className="h-4 w-4 mr-1" /> Download
-                  </Button>
-                  <Button 
-                    onClick={copyImageUrl}
-                    variant="secondary"
-                    size="sm"
-                  >
-                    <Copy className="h-4 w-4 mr-1" /> Copy URL
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          {history.length > 1 && (
-            <Accordion type="single" collapsible className="mb-8">
-              <AccordionItem value="history">
-                <AccordionTrigger>Generation History</AccordionTrigger>
-                <AccordionContent>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    {history.map((url, index) => (
-                      <div 
-                        key={index} 
-                        className="cursor-pointer hover-3d"
-                        onClick={() => loadFromHistory(url)}
-                      >
-                        <img 
-                          src={url} 
-                          alt={`History ${index + 1}`} 
-                          className="w-full h-auto rounded-lg"
-                        />
-                      </div>
-                    ))}
+      <div className="w-full flex flex-col items-center mb-8 min-h-[440px]">
+        {isLoading ? (
+          <ImageSkeletonLoader />
+        ) : generatedImage ? (
+          <div className="fade-in">
+            <Card className="luxury-card overflow-hidden mb-8 shadow-xl hover:shadow-2xl card-3d transition-all duration-500">
+              <CardContent className="p-0">
+                <div className="relative group">
+                  <img 
+                    src={generatedImage} 
+                    alt="Generated Ferrari Roma" 
+                    className="w-full h-auto transition-transform duration-300 hover:scale-105 group-hover:shadow-lg"
+                  />
+                  <div className="absolute bottom-0 right-0 p-4 flex gap-2 z-20">
+                    <Button 
+                      onClick={downloadImage}
+                      variant="secondary"
+                      size="sm"
+                      className="transition-all hover:scale-105"
+                    >
+                      <Download className="h-4 w-4 mr-1" /> Download
+                    </Button>
+                    <Button 
+                      onClick={copyImageUrl}
+                      variant="secondary"
+                      size="sm"
+                      className="transition-all hover:scale-105"
+                    >
+                      <Copy className="h-4 w-4 mr-1" /> Copy URL
+                    </Button>
                   </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          )}
-        </div>
-      )}
+                </div>
+              </CardContent>
+            </Card>
+            {history.length > 1 && (
+              <Accordion type="single" collapsible className="mb-8 fade-in" style={{ animationDelay: "120ms" }}>
+                <AccordionItem value="history">
+                  <AccordionTrigger>Generation History</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                      {history.map((url, index) => (
+                        <div 
+                          key={index} 
+                          className="cursor-pointer hover-3d transition-all duration-200 group"
+                          onClick={() => loadFromHistory(url)}
+                        >
+                          <img 
+                            src={url} 
+                            alt={`History ${index + 1}`} 
+                            className="w-full h-auto rounded-lg shadow group-hover:shadow-lg group-hover:scale-105 transition-all"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
+          </div>
+        ) : null}
+      </div>
       
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center fade-in" style={{ animationDelay: "140ms" }}>
         <p className="text-sm text-nautical-sand">
           Powered by <a href="https://runware.ai" target="_blank" rel="noopener noreferrer" className="text-nautical-lightblue hover:underline">Runware AI</a>
         </p>
